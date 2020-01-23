@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .contenedorimagen{
+        display: block;
+        margin: auto;
+        border: 2px solid black;
+        width: 70%;
+        min-height: 500px;
+        background-image: url("img/horse.jpg");
+        margin-top: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .imagenobjectfit{
+
+    }
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 49vw 49vw;
+    padding: 10px;
+    background-color: lightblue;
+
+    &__elementohijo{
+        padding: 3px;
+        &__imagenresponsive{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+}
+
+.imagenresponsivemaxwidth{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}

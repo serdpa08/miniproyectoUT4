@@ -1,0 +1,16 @@
+.contenedorgrid {
+  display: inline-grid;
+  background-color: blueviolet;
+  padding: 20px;
+  grid-template-columns: auto auto auto;
+  gap: 60px 60px;
+  /* Primero row segundo column */
+}
+.contenedorgrid__elementohijo {
+  background-color: greenyellow;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+/*# sourceMappingURL=hojaEstilos.css.map */

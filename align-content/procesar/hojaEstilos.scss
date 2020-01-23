@@ -1,0 +1,126 @@
+%contenedor{
+    grid-template-columns: auto auto auto;
+    background-color: thistle;
+    padding: 10px;
+    column-gap: 30px;
+    row-gap: 20px;
+    box-sizing: border-box;
+}
+
+%contenedorhijo{
+        background-color: brown;
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+}
+
+.contenedorgrid{
+    display: grid;
+    @extend %contenedor;
+
+        &__elementohijo{
+            @extend %contenedorhijo;
+            
+
+        }
+
+        &__elementohijo2{
+            @extend %contenedorhijo;
+            
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        &__elementohijo7{
+            @extend %contenedorhijo;
+            
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+}
+
+.contenedorgridlinea{
+    display: inline-grid;
+    @extend %contenedor;
+
+        &__elementohijo{
+            
+            @extend %contenedorhijo;
+            
+
+        }
+}
+
+.contenedorgridtempcolumns{
+    display: grid;
+    @extend %contenedor;
+    grid-template-columns: repeat(5, 20%); /* 20% 20% 20% 20% 20% */
+    box-sizing: border-box;
+    row-gap: 0;
+    column-gap: 0;
+        &__elementohijo{
+            @extend %contenedorhijo;
+            
+
+        }
+    }
+
+    .contenedorgridtemprows{
+        display: grid;
+        @extend %contenedor;
+        grid-template-columns: repeat(5, 20%); /* 20% 20% 20% 20% 20% */
+        
+        row-gap: 0;
+        column-gap: 0;
+        grid-template-rows: 200px 300px 200px;
+            &__elementohijo{
+                @extend %contenedorhijo;
+                
+    
+            }
+        }
+
+        @mixin justifycontent($valor) {
+            justify-content: $valor;
+            
+        }
+
+        .contenedorgridjustifycontent{
+            display: grid;
+            @extend %contenedor;
+            /*@include justifycontent(end);
+            @include justifycontent(start);
+            @include justifycontent(space-beetween);
+            @include justifycontent(center);
+            @include justifycontent(space-around );*/
+            @include justifycontent(space-around);
+        
+                &__elementohijo{
+                    @extend %contenedorhijo;
+                    
+        
+                }
+            }
+
+            @mixin aligncontent($valor) {
+                align-content: $valor;
+            }
+
+
+            .contenedorgridaligncontent{
+                display: grid;
+                @extend %contenedor;
+                @include aligncontent(center);
+                @include justifycontent(center);
+                min-height: 500px;
+            
+                    &__elementohijo{
+                        @extend %contenedorhijo;
+                        
+            
+                    }
+                }
+

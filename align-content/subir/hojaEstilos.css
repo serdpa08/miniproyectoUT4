@@ -1,0 +1,67 @@
+.contenedorgridaligncontent, .contenedorgridjustifycontent, .contenedorgridtemprows, .contenedorgridtempcolumns, .contenedorgridlinea, .contenedorgrid {
+  grid-template-columns: auto auto auto;
+  background-color: thistle;
+  padding: 10px;
+  column-gap: 30px;
+  row-gap: 20px;
+  box-sizing: border-box;
+}
+
+.contenedorgridaligncontent__elementohijo, .contenedorgridjustifycontent__elementohijo, .contenedorgridtemprows__elementohijo, .contenedorgridtempcolumns__elementohijo, .contenedorgridlinea__elementohijo, .contenedorgrid__elementohijo7, .contenedorgrid__elementohijo2, .contenedorgrid__elementohijo {
+  background-color: brown;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contenedorgrid {
+  display: grid;
+}
+.contenedorgrid__elementohijo2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.contenedorgrid__elementohijo7 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.contenedorgridlinea {
+  display: inline-grid;
+}
+.contenedorgridtempcolumns {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  /* 20% 20% 20% 20% 20% */
+  box-sizing: border-box;
+  row-gap: 0;
+  column-gap: 0;
+}
+.contenedorgridtemprows {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  /* 20% 20% 20% 20% 20% */
+  row-gap: 0;
+  column-gap: 0;
+  grid-template-rows: 200px 300px 200px;
+}
+.contenedorgridjustifycontent {
+  display: grid;
+  /*@include justifycontent(end);
+  @include justifycontent(start);
+  @include justifycontent(space-beetween);
+  @include justifycontent(center);
+  @include justifycontent(space-around );*/
+  justify-content: space-around;
+}
+.contenedorgridaligncontent {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+/*# sourceMappingURL=hojaEstilos.css.map */

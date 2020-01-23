@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+    <link rel="stylesheet" href="hojaEstilos.css">
+</head>
+<body>
+    <h2>Canvas</h2>
+
+    <canvas id="canvas1" width="800" height="400"></canvas><br>
+    <button onclick="dibujarCuadrado()">Dibujar Casa</button>
+    <button onclick="dibujartexto()">Texto</button>
+    <button onclick="dibujarCirculo()">Poner sol</button>
+    <button onclick="location.reload()">Limpiar Canvas</button>
+<script>
+
+function dibujarCuadrado(){    
+var canvas = document.getElementById('canvas1');
+var contexto = canvas.getContext("2d");
+contexto.moveTo(200, 200);
+contexto.lineTo(400, 200);
+contexto.moveTo(200, 200);
+contexto.lineTo(200, 400);
+contexto.moveTo(200, 400);
+contexto.lineTo(400, 400);
+contexto.moveTo(400, 400);
+contexto.lineTo(400, 200);
+
+
+contexto.moveTo(200, 200);
+contexto.lineTo(300, 100);
+contexto.moveTo(300, 100);
+contexto.lineTo(400, 200);
+
+contexto.stroke();
+}
+
+function dibujartexto(){
+    var canvas1 = document.getElementById('canvas1');
+    var contexto1 = canvas1.getContext("2d");
+    contexto1.font = "30px Arial";
+    contexto1.fillText("HOLA", 600, 200);
+}
+
+function dibujarCirculo(){
+    var canvas2 = document.getElementById('canvas1');
+    var contexto2 = canvas2.getContext("2d");
+
+    contexto2.beginPath(); 
+    contexto2.arc(600, 70, 40, 0, 2 * Math.PI);/*Eje x, eje y, radio, inicio de la circunferencia (0) y final de la circunferencia(2*PI)*/
+}
+
+</script>
+    
+</body>
+</html>

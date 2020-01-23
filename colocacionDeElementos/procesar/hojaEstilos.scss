@@ -1,0 +1,18 @@
+.contenedorgrid{
+    display: inline-grid;
+    background-color: blueviolet;
+    padding: 20px;
+    grid-template-columns: auto auto auto;
+
+    &__elementohijo{
+        background-color: greenyellow;
+        padding: 30px;
+        text-align: center;
+        border: 2px solid black;
+    }
+
+    &__elemento1{
+        grid-column-start: 2; 
+        grid-column-end: 3;
+    }
+}

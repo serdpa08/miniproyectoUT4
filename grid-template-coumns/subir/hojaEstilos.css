@@ -1,0 +1,27 @@
+.contenedorgrid {
+  display: grid;
+  background-color: blueviolet;
+  padding: 20px;
+  grid-template-columns: auto auto auto;
+}
+.contenedorgrid__elementohijo {
+  background-color: greenyellow;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.contenedorgrid1 {
+  display: grid;
+  background-color: blueviolet;
+  padding: 20px;
+  grid-template-columns: 200px 300px 400px;
+}
+.contenedorgrid1__elementohijo {
+  background-color: greenyellow;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+/*# sourceMappingURL=hojaEstilos.css.map */
